@@ -1,3 +1,35 @@
+# Project Trazyn
+
+## Download
+
+- **Current preview - Demo 1.1 (November 2026):** [Project_Trazyn-demo_1_1.zip](Project_Trazyn-demo_1_1.zip)
+- Old version - Demo 1.0 (September 2026): [OldVersions/Project_Trazyn-demo_1_0.zip](OldVersions/Project_Trazyn-demo_1_0.zip)
+
+How to play: extract the zip anywhere and run `ProjectTrazyn.exe` from the extracted folder (keep it next to the `GameData` folder).
+Requirements: Windows 10/11, a GPU with OpenGL 4.3. If Windows complains about a missing `VCRUNTIME140.dll` / `MSVCP140.dll`,
+install the Microsoft Visual C++ Redistributable (x86). If SmartScreen shows "Windows protected your PC", click "More info" -> "Run anyway".
+Your profile is saved in `%APPDATA%\ProjectTrazyn`.
+
+## What's new in Demo 1.1
+
+- **VS BOT mode (5 vs 5)**: your squad (up to 5 units, empty slots filled by AI allies) against 5 bots on a new symmetrical map,
+  "Trenches of Solemnace": hidden and protected spawns, trenches, bunkers, trees and ruins. Win by wiping out the enemy squad,
+  or by having more points on the field when the 10 minutes run out. If you die, you take control of a living ally.
+- **Point-based queues** like the tiers in WoT: up to 20 points, 21-100 and 101-300. The menu tells you if your squad is eligible;
+  allies and enemies are randomized close to the cap but never above it.
+- **Bot AI by role**: marksmen keep their distance, shoot easy targets and reposition to cover when threatened; versatile units
+  decide from what they see whether they can win a melee; melee units charge no matter what.
+- **Garage, research and shop**: local profile with Energy and study points, research tree for Imperial Guard, Space Marines and Orks,
+  new profiles start with the root unit of each branch (Conscript, Neophyte, Gretchin).
+- **New units and bodies**: Conscripts, Whiteshields, Ogryn, Scouts, Phobos, Gravis, Gretchin, Yoof, Shoota and Loota Boyz;
+  animated 3D bodies for humans, orks, ogryns, neophytes, astartes and gretchin (F2 switches between the animated model and the hitbox blocks).
+- **Combat**: per-block hitboxes (head, torso, arms, legs), hit feedback, melee that hits the real hitboxes, parry ring under your feet,
+  shields / "perfect deflect" can parry ranged shots, shots now converge on the crosshair.
+- **Testing Lobby**: a shooting range with a training dummy for every skeleton, showing damage and hit location.
+- **Rebalanced stats and costs** for every unit, weapon and armor piece.
+
+---
+
 This is my first project, many of you can recognize the main name and many names inside from other famous ip, my idea is to share this project to their game-developing team in
 hope to get recognized as what i am trying to do, i'm a solo developer from Italy, and this is what my free time has produced. 
 The main idea for this game was to give to players a similar but more complex Kill Team (TSG from Games Workshop) experience.
