@@ -2,13 +2,35 @@
 
 ## Download
 
-- **Current preview - Demo 1.1 (November 2026):** [Project_Trazyn-demo_1_1.zip](Project_Trazyn-demo_1_1.zip)
+- **Current preview - Demo 1.2 (November 2026):** [Project_Trazyn-demo_1_2.zip](Project_Trazyn-demo_1_2.zip)
+- Old version - Demo 1.1 (November 2026): [OldVersions/Project_Trazyn-demo_1_1.zip](OldVersions/Project_Trazyn-demo_1_1.zip)
 - Old version - Demo 1.0 (September 2026): [OldVersions/Project_Trazyn-demo_1_0.zip](OldVersions/Project_Trazyn-demo_1_0.zip)
 
 How to play: extract the zip anywhere and run `ProjectTrazyn.exe` from the extracted folder (keep it next to the `GameData` folder).
 Requirements: Windows 10/11, a GPU with OpenGL 4.3. If Windows complains about a missing `VCRUNTIME140.dll` / `MSVCP140.dll`,
 install the Microsoft Visual C++ Redistributable (x86). If SmartScreen shows "Windows protected your PC", click "More info" -> "Run anyway".
 Your profile is saved in `%APPDATA%\ProjectTrazyn`.
+
+## What's new in Demo 1.2
+
+- **New research trees** for every faction, with branches that split and rejoin:
+  - *Imperial Guard*: Conscripts → Whiteshields → Guardsman / Schola Progenium Cadet, then Special Weapon Team, Ogryn and Kasrkin,
+    command (Captain → Colonel → Lord General), Tempestus (Scions → Specialist → Tempestor → Tempestor Prime) and the Commissariat.
+  - *Orks*: Slugga and Shoota branches (Stormboyz, 'Ard Boyz, Kommandos **or** Tankbustas, Flash Gitz) meeting at the Nobz → Meganobz → Warboss,
+    and the Loota branch up to the Big Mek Boss in Mega Armour.
+  - *Space Marines*: Aspirant → Scout Squad → Firstborn, then Tactical, Assault, Heavy Support and Reconnaissance branches up to the Captains.
+  - **Mastery**: to unlock the next unit you must first research all the gear of the current one (gold star). Some units need two masteries.
+- **Unit kits**: every playable unit now has its own base loadout and unlockable gear (weapons, armour pieces, equipment) to research and buy:
+  Conscript, Whiteshield (deployable lascannon), Guardsman (flamer, plasma, melta, long-las, grenade launcher, vox caster that calls in a Conscript),
+  Schola Progenium Cadet (carapace armour, hot-shot weapons, ammo crate), all five Ork units, Aspirant, Scout (auspex radar, camo cloak, sniper,
+  heavy bolter) and Firstborn (Mk VII power armour, power pack boost, krak grenade, Imperial insignia aura).
+- **Faction mechanics on the V key**: Orks unleash the **WAAAGH!** when the bar is full (it drains if you stop fighting);
+  the Imperial Guard gets **Follow Orders**, charged by staying close to your squad, with a radial menu of four 10-second orders
+  (Take AIM!, Take Cover, MOVE MOVE MOVE!, Fix Bayonets!). Turning your back on the enemy drains it.
+- **Bolt weapons** fire huge rocket-propelled shells with a smoke trail and an explosive impact; normal guns fire thin tracers.
+- **Camo cloak**: the body turns into a transparent, liquid-like refraction of the background; AI enemies can't see you beyond 6 m.
+- **Squads**: unlimited units within the point cap, with a maximum per unit type; every unit is a respawn. Crouch with CTRL,
+  Gretchin can slowly climb tall walls, procedural animations for melee, grenades, items and building.
 
 ## What's new in Demo 1.1
 
