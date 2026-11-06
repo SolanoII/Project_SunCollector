@@ -2,7 +2,8 @@
 
 ## Download
 
-- **Current preview - Demo 1.2 (November 2026):** [Project_Trazyn-demo_1_2.zip](Project_Trazyn-demo_1_2.zip)
+- **Current preview - Demo 1.3 (November 2026):** [Project_Trazyn-demo_1_3.zip](Project_Trazyn-demo_1_3.zip)
+- Old version - Demo 1.2 (November 2026): [OldVersions/Project_Trazyn-demo_1_2.zip](OldVersions/Project_Trazyn-demo_1_2.zip)
 - Old version - Demo 1.1 (November 2026): [OldVersions/Project_Trazyn-demo_1_1.zip](OldVersions/Project_Trazyn-demo_1_1.zip)
 - Old version - Demo 1.0 (September 2026): [OldVersions/Project_Trazyn-demo_1_0.zip](OldVersions/Project_Trazyn-demo_1_0.zip)
 
@@ -10,6 +11,26 @@ How to play: extract the zip anywhere and run `ProjectTrazyn.exe` from the extra
 Requirements: Windows 10/11, a GPU with OpenGL 4.3. If Windows complains about a missing `VCRUNTIME140.dll` / `MSVCP140.dll`,
 install the Microsoft Visual C++ Redistributable (x86). If SmartScreen shows "Windows protected your PC", click "More info" -> "Run anyway".
 Your profile is saved in `%APPDATA%\ProjectTrazyn`.
+
+## What's new in Demo 1.3
+
+- **Marksmanship instead of random spread**: shots go where you aim; low Ballistic Skill means more recoil, grazing hits and an upward
+  spray arc, high skill means pin-point shots. A careful first shot from a crouch is accurate, and lining up a perfect shot takes longer
+  for poor marksmen.
+- **Combat effects per weapon type**: lasguns, autoguns, bolters, plasma, melta and flamers each have their own projectile, muzzle flash
+  and impact; melee attacks leave slash trails.
+- **Readable rock-paper-scissors melee**: visible wind-ups and recovery delays between attacks, so you can read and counter
+  Normal, Fast and Heavy attacks.
+- **Better bodies and clothing**: Ork, Aspirant and Astartes bodies rebuilt from the base human anatomy, procedural skin, cloth and
+  armour detail, new clothing textures, Mk VII power armour on the animated body.
+- **Every race moves differently**: Orks swagger hunched with wide arms, Gretchin scurry crouched and look around nervously,
+  Space Marines walk heavy and upright, Ogryns lumber and sway. Extra bones: Gretchin ears and jaw, Ork jaw (roars on WAAAGH! and charges),
+  Ogryn jaw and belly, Astartes pauldrons.
+- **Muscle tone and race skin**: sharper muscle definition, veins on Orks, Space Marines and Ogryns, mottled warty skin for Orks and Gretchin.
+- **Squig model**: the Gretchin's squig is now a proper creature (huge toothy maw, eyes, spines, clawed feet) that hops, bites and ragdolls.
+- **Showcase**: new SHOWCASE tab with all races side by side and every animation; the research tree has a 3D PREVIEW button for each unit.
+- **New customization screen**: full-screen editor with a live 3D preview of your unit (drag to rotate, wheel to zoom, idle/aim/walk/run),
+  skin tone presets, equipment and armour changes shown instantly, Save or Undo.
 
 ## What's new in Demo 1.2
 
