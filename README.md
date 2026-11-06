@@ -2,15 +2,46 @@
 
 ## Download
 
-- **Current preview - Demo 1.3 (November 2026):** [Project_Trazyn-demo_1_3.zip](Project_Trazyn-demo_1_3.zip)
+- **Current preview - Demo 1.4 (November 2026):** [Project_Trazyn-demo_1_4.zip](Project_Trazyn-demo_1_4.zip)
+- Old version - Demo 1.3 (November 2026): [OldVersions/Project_Trazyn-demo_1_3.zip](OldVersions/Project_Trazyn-demo_1_3.zip)
 - Old version - Demo 1.2 (November 2026): [OldVersions/Project_Trazyn-demo_1_2.zip](OldVersions/Project_Trazyn-demo_1_2.zip)
 - Old version - Demo 1.1 (November 2026): [OldVersions/Project_Trazyn-demo_1_1.zip](OldVersions/Project_Trazyn-demo_1_1.zip)
 - Old version - Demo 1.0 (September 2026): [OldVersions/Project_Trazyn-demo_1_0.zip](OldVersions/Project_Trazyn-demo_1_0.zip)
 
 How to play: extract the zip anywhere and run `ProjectTrazyn.exe` from the extracted folder (keep it next to the `GameData` folder).
 Requirements: Windows 10/11, a GPU with OpenGL 4.3. If Windows complains about a missing `VCRUNTIME140.dll` / `MSVCP140.dll`,
-install the Microsoft Visual C++ Redistributable (x86). If SmartScreen shows "Windows protected your PC", click "More info" -> "Run anyway".
+install the Microsoft Visual C++ Redistributable 2015-2022 (x64). If SmartScreen shows "Windows protected your PC", click "More info" -> "Run anyway".
 Your profile is saved in `%APPDATA%\ProjectTrazyn`.
+On first launch the game picks a graphics quality (Low, Medium, High or Max) for your graphics card; you can change it in
+Options -> GRAPHICS. Press F3 in game to see FPS and where the frame time goes.
+
+## What's new in Demo 1.4
+
+- **Grimdark rendering overhaul**:
+  - real-time shadows for every animated character, body, clothing and armour included; fixed the sun shadows, which never worked;
+  - skin with subsurface scattering: soft reddish light-to-shadow transition, light shining through ears and fingers;
+  - ambient occlusion: darker corners, folds and contact points;
+  - a sky with moving clouds, height fog with drifting dust, grimdark colour grading (cold shadows, warm lights, muted colours,
+    vignette and film grain);
+  - FXAA anti-aliasing.
+- **Battlefield materials**: maps are no longer flat-coloured blocks. Mud with puddles and craters, cracked rockcrete, rusty riveted metal,
+  sandbags, burnt wood, trench earthworks, dead trees and rubble, plus scattered debris across the field.
+- **Worn gear**: clothing and armour are muted and dirty. Mud climbs from the boots, dust settles on the shoulders, dried blood stains the cloth,
+  rust and scorch marks cover the armour. No bright colours: everything looks like a universe heading towards its end.
+- **Options menu**:
+  - working volume sliders (master, effects, voices, music);
+  - a dark ambient soundtrack (organ drone, distant choir, cathedral bell, wind and far artillery) that ducks under the fighting;
+  - a new GRAPHICS tab that controls every effect: shadows, ambient occlusion, bloom, brightness, skin, grime, map materials,
+    debris, sky, fog and colour grading.
+- **Performance for weaker PCs**:
+  - four quality levels (Low, Medium, High, Max), chosen automatically on first launch for your graphics card or integrated GPU;
+  - render resolution scaling, half-resolution ambient occlusion, shadow resolution setting and a VSync toggle;
+  - off-screen culling: objects and characters you can't see are no longer drawn;
+  - F3 performance overlay with FPS and CPU/GPU timings.
+- **Ready for real art**: the engine now loads characters made by artists (FBX or glTF) with full PBR textures (colour, normal maps,
+  roughness/metal/occlusion, emissive). It recognises Mixamo and Unreal skeletons and adapts the game animations to rigs exported
+  from Blender or Maya.
+- **Log file**: `sunengine_log.txt` next to the exe, useful when reporting a problem.
 
 ## What's new in Demo 1.3
 
