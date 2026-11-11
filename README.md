@@ -2,7 +2,9 @@
 
 ## Download
 
-- **Current preview - Demo 1.4 (November 2026):** [Project_Trazyn-demo_1_4.zip](Project_Trazyn-demo_1_4.zip)
+- **Current preview - Demo 1.6 (November 2026):** [Project_Trazyn-demo_1_6.zip](Project_Trazyn-demo_1_6.zip)
+- Old version - Demo 1.5 (November 2026): [OldVersions/Project_Trazyn-demo_1_5.zip](OldVersions/Project_Trazyn-demo_1_5.zip)
+- Old version - Demo 1.4 (November 2026): [OldVersions/Project_Trazyn-demo_1_4.zip](OldVersions/Project_Trazyn-demo_1_4.zip)
 - Old version - Demo 1.3 (November 2026): [OldVersions/Project_Trazyn-demo_1_3.zip](OldVersions/Project_Trazyn-demo_1_3.zip)
 - Old version - Demo 1.2 (November 2026): [OldVersions/Project_Trazyn-demo_1_2.zip](OldVersions/Project_Trazyn-demo_1_2.zip)
 - Old version - Demo 1.1 (November 2026): [OldVersions/Project_Trazyn-demo_1_1.zip](OldVersions/Project_Trazyn-demo_1_1.zip)
@@ -14,6 +16,66 @@ install the Microsoft Visual C++ Redistributable 2015-2022 (x64). If SmartScreen
 Your profile is saved in `%APPDATA%\ProjectTrazyn`.
 On first launch the game picks a graphics quality (Low, Medium, High or Max) for your graphics card; you can change it in
 Options -> GRAPHICS. Press F3 in game to see FPS and where the frame time goes.
+
+## What's new in Demo 1.6
+
+- **Squads and lobbies (peer to peer)**: create a squad in the garage (SQUADRA button) and share its 6-digit code (COPY / PASTE buttons).
+  Your squadmates stand next to your unit in the garage with their name above their head, and the camera widens to frame everyone.
+  - *Open* lobbies are listed and anyone can join; *closed* lobbies are listed but the leader accepts or refuses each request
+    (the code still lets you straight in); *private* lobbies are hidden and only the code works.
+  - Ready / not ready, kick, ping of every squadmate.
+- **Best connection hosts the game**: every player measures latency and packet loss towards everyone else. Whoever opens the lobby
+  is the host; if someone with a clearly better connection for everyone joins, the host role moves to them on its own, without
+  interrupting. If the host leaves or crashes, the next best player takes over within a few seconds and continues from the last state.
+- **New SERVER screen**: list of open lobbies (local network and matchmaking server) with host, players, status (in lobby / in game)
+  and ping; you can also join a game that has already started. On the right: open your own lobby, make it visible or private, copy its code,
+  set the matchmaking server address.
+- **Play online without opening ports**: the new matchmaking server (`TrazynServer.exe`, a separate small program) keeps the lobby list
+  and the 6-digit codes, introduces players to each other so their routers open up to each other, and relays the messages when two
+  routers just won't connect. Only the person running it opens one port (UDP 27640); the game itself stays peer to peer.
+- **Fixes**:
+  - everything a match leaves behind is now reset when you leave a match or start a new one (shots still in flight, tracers, corpses,
+    cloak, half-finished vaults, melee or reload in progress, scope);
+  - you could get stuck inside a wall after vaulting: the landing spot is now checked (other distances are tried, or no vault), and a
+    body that ends up inside a wall is pushed out on the nearest side.
+- The co-op/versus match itself is not synchronized yet: the START (TEST) button tests the connection and the host hand-over.
+
+**How to play online**
+- *Same house / same network*: the 6-digit code works out of the box.
+- *Hamachi (or ZeroTier, Radmin VPN)*: the host opens an **open** lobby; the others type the host's Hamachi address followed by
+  `:27650` (for example `25.61.120.33:27650`) in the code field and press ENTER. Allow the game on public networks in the Windows firewall.
+- *Matchmaking server*: one person runs `TrazynServer.exe` with UDP port 27640 forwarded on their router; everyone writes
+  `that-address:27640` in the SERVER screen and presses CONNECT. Then codes and the lobby list work over the internet.
+
+## What's new in Demo 1.5
+
+- **Shooting that hits hard**:
+  - every weapon type has its own layered sound (lasgun, hot-shot, long-las, autogun, shotgun, sniper, bolter, plasma, melta, flamer,
+    launcher, grav) instead of one shared sample, with random variations so no two shots sound the same;
+  - distant gunfire: far shots arrive late like real sound and only the echoing boom carries across the map;
+  - bullets that miss you by a hair whizz past your head; explosions finally have a sound, near and far;
+  - impacts sound different on flesh, armour, walls, earth and energy; a tick confirms every hit and a heavier note confirms the kill;
+  - muzzle flashes and explosions light up the scene, brass casings fly out and bounce, bullet holes and scorch marks stay on walls
+    and ground (laser, plasma and melta marks glow while they cool down);
+  - camera shake and FOV punch on firing, explosions and incoming hits; enemies flinch where they are hit;
+  - melee hits "land": a split-second hit-stop, then the shake.
+- **Every body has its own weight**: a Gretchin trembles at everything, its own gun yanks it around and its steps are tiny;
+  a Space Marine is a rock under fire, its guns sound deeper, its armoured boots are heard from afar and the ground shakes for
+  small creatures walking next to it. Orks and Ogryns sit in between.
+- **New options** in AUDIO: camera shake strength (0-150%) and hit-stop on/off.
+- **Bug fixes**:
+  - particles and tracers were visible through walls;
+  - damage arrived before the projectile you see (bolts and plasma killed while still in flight) and melee hit before the swing
+    reached the target: now damage lands when the shot or the blade gets there;
+  - dead units turned back into blocks: now the animated body stays and falls with the ragdoll, and the ragdoll starts facing the
+    same way as the unit;
+  - footsteps on dirt, metal and wood were silent.
+- **New interface**: a single grimdark style for every screen, half gothic (pointed arches, burnished brass, Roman numerals) and half
+  futuristic (chamfered panels, instrument grids), with new fonts. The research tree has been redesigned (unit cards with tier,
+  state and progress towards the next research, glowing branches, drag to pan with the right mouse button), together with the top bar,
+  the shop, the pause menu and the health, stamina and ammo HUD.
+- **Faster rendering**: all map blocks are drawn in a single call (also in the shadow pass) and character bones are uploaded once
+  per character instead of once per clothing piece.
 
 ## What's new in Demo 1.4
 
