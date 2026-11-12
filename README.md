@@ -4,37 +4,68 @@
 
 ## How to play
 
-Extract the zip anywhere and run **ProjectSunCollector.exe** from the extracted folder (keep it next to the GameData folder). In Demo 1.6 and older the executable is still called ProjectTrazyn.exe.
+Extract the zip anywhere and run **ProjectSunCollector.exe** from the extracted folder (keep it next to the GameData folder). In Demo 1.6 and older it was called ProjectTrazyn.exe.
 
 - Requirements: Windows 10/11, a GPU with OpenGL 4.3.
 - If Windows complains about a missing VCRUNTIME140.dll / MSVCP140.dll, install the Microsoft Visual C++ Redistributable 2015-2022 (x64).
 - If SmartScreen shows "Windows protected your PC", click "More info" -> "Run anyway".
-- Your profile is saved in `%APPDATA%\ProjectSunCollector` (Demo 1.6 and older: `%APPDATA%\ProjectTrazyn`; the new version copies your old profile over on first launch, so you keep your squad and progress).
+- Your profile is saved in `%APPDATA%\ProjectSunCollector` (Demo 1.6 and older: `%APPDATA%\ProjectTrazyn`; on first launch 1.7 copies your old profile over, so you keep your squad and progress).
 - On first launch the game picks a graphics quality (Low, Medium, High or Max) for your graphics card; you can change it in Options -> GRAPHICS.
 - Press F3 in game to see FPS and where the frame time goes.
 
-## What's new in Demo 1.6
+## How to play online
+
+- Same house / same network: the 6-digit code works out of the box.
+- Hamachi (or ZeroTier, Radmin VPN): the host opens an open lobby; the others type the host's Hamachi address followed by :27650 (for example 25.61.120.33:27650) in the code field and press ENTER. Allow the game on public networks in the Windows firewall.
+- Matchmaking server: one person runs SunCollectorServer.exe (TrazynServer.exe in Demo 1.6, it still works with 1.7) with UDP port 27640 forwarded on their router; everyone writes that-address:27640 in the SERVER screen and presses CONNECT. Then codes and the lobby list work over the internet.
+
+## What's new in Demo 1.7
+
+**New name: Project SunCollector.** The game leaves the Warhammer 40,000 names behind and moves into its own universe, The Sun's Darkest Hours. The executable is now ProjectSunCollector.exe and the matchmaking server SunCollectorServer.exe; your old profile is copied over on first launch, so you keep squad, research and currency.
+
+**Play together for real.** The whole squad now enters the same match:
+
+- the leader starts the match from the SCHIERAMENTO (deployment) screen and every squadmate enters with their own squad and respawns; a player who arrives late can join a match already running (ENTRA IN PARTITA button);
+- the host moves the enemies and the waves; the host role goes to the player with the best connection and, if the host leaves or crashes, the next one takes over and the match goes on;
+- you see your squadmates in the field with their name above their head, their shots, melee attacks and gestures; damage and kills are credited to whoever really dealt them;
+- the leader can end the match for everyone;
+- works in Difesa della pietra (the wave survival) and Sandbox.
+
+**VS BOT with friends and PvP:**
+
+- squadmates take the place of as many bots on your side;
+- press **T** during the match to switch to the other team, taking the place of an enemy bot: invite a friend and play against each other;
+- 20 seconds of warm-up before the match really starts;
+- enemy bots no longer all look the same: each bot builds its own squad (mixed, horde, elite, two factions, one faction, swarm), mixing factions, always within the point limit and with random gear whose cost counts too;
+- invisible walls around each base: enemies can't get into your spawn, you can only come out of it.
+
+**New names everywhere** (factions, units, weapons, armour, gear, research tree, orders, bot names):
+
+- factions: Vrepighs, Vanguard Armors and Kingship;
+- the Vrepighs' battle cry is now HUNGRY!; their beasts are the Grugn (Grugn da Compagnia, Grugn Esplosivo);
+- the Kingship's vox caster is now the Communication Device; its orders are Ordine: Mirare and Ordine: Fissare le Baionette;
+- units: Pighcib, Vrepigh, Vrepigh Capozanna, Candidato Umano, Difensore Vanguardio, Kingsman Scelto, Ogre da Guerra and many more;
+- the wave mode is now "Difesa della pietra (ondata Vrepighs)"; Data Recovery is hidden for now;
+- units you already recruited keep the custom name you gave them.
+
+Demo 1.7 uses a new network protocol: everyone in the squad has to update to 1.7 to play together. The voice lines still shout the old battle cry: new recordings are coming.
+
+## Older versions
+
+> The notes below describe the old demos as they were released, with the old Warhammer 40,000 names and file names (ProjectTrazyn.exe, TrazynServer.exe). In the new versions factions, units and gear have their own The Sun's Darkest Hours names (Vrepighs, Vanguard Armors, Kingship...).
+
+### What's new in Demo 1.6
 
 - Squads and lobbies (peer to peer): create a squad in the garage (SQUADRA button) and share its 6-digit code (COPY / PASTE buttons). Your squadmates stand next to your unit in the garage with their name above their head, and the camera widens to frame everyone.
 - Open lobbies are listed and anyone can join; closed lobbies are listed but the leader accepts or refuses each request (the code still lets you straight in); private lobbies are hidden and only the code works.
 - Ready / not ready, kick, ping of every squadmate.
 - Best connection hosts the game: every player measures latency and packet loss towards everyone else. Whoever opens the lobby is the host; if someone with a clearly better connection for everyone joins, the host role moves to them on its own, without interrupting. If the host leaves or crashes, the next best player takes over within a few seconds and continues from the last state.
 - New SERVER screen: list of open lobbies (local network and matchmaking server) with host, players, status (in lobby / in game) and ping; you can also join a game that has already started. On the right: open your own lobby, make it visible or private, copy its code, set the matchmaking server address.
-- Play online without opening ports: the new matchmaking server (SunCollectorServer.exe, called TrazynServer.exe in Demo 1.6; a separate small program) keeps the lobby list and the 6-digit codes, introduces players to each other so their routers open up to each other, and relays the messages when two routers just won't connect. Only the person running it opens one port (UDP 27640); the game itself stays peer to peer.
+- Play online without opening ports: the new matchmaking server (SunCollectorServer.exe, TrazynServer.exe, a separate small program) keeps the lobby list and the 6-digit codes, introduces players to each other so their routers open up to each other, and relays the messages when two routers just won't connect. Only the person running it opens one port (UDP 27640); the game itself stays peer to peer.
 - Fixes:
     - everything a match leaves behind is now reset when you leave a match or start a new one (shots still in flight, tracers, corpses, cloak, half-finished vaults, melee or reload in progress, scope);
     - you could get stuck inside a wall after vaulting: the landing spot is now checked (other distances are tried, or no vault), and a body that ends up inside a wall is pushed out on the nearest side.
-- The co-op/versus match itself is not synchronized yet: the START (TEST) button tests the connection and the host hand-over.
-
-### How to play online
-
-- Same house / same network: the 6-digit code works out of the box.
-- Hamachi (or ZeroTier, Radmin VPN): the host opens an open lobby; the others type the host's Hamachi address followed by :27650 (for example 25.61.120.33:27650) in the code field and press ENTER. Allow the game on public networks in the Windows firewall.
-- Matchmaking server: one person runs SunCollectorServer.exe (TrazynServer.exe in Demo 1.6) with UDP port 27640 forwarded on their router; everyone writes that-address:27640 in the SERVER screen and presses CONNECT. Then codes and the lobby list work over the internet.
-
-## Older versions
-
-> The notes below describe the old demos as they were released, with the old Warhammer 40,000 names. In the new versions factions, units and gear have their own The Sun's Darkest Hours names (Vrepighs, Vanguard Armors, Kingship...).
+- The co-op/versus match itself was not synchronized yet (it is from 1.7): the START (TEST) button tested the connection and the host hand-over.
 
 ### What's new in Demo 1.5
 
